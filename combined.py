@@ -4,6 +4,7 @@ import av
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+from abc import ABC
 from PIL import Image
 from object_detection.utils import label_map_util
 from streamlit_webrtc import VideoTransformerBase, webrtc_streamer
@@ -19,8 +20,8 @@ for item in category_index:
     CLASSES.append(item['name'])
 
 
-class VideoTransformer(VideoTransformerBase):
-
+class VideoTransformer(VideoTransformerBase, ABC):
+    @st.cache(allow_output_mutation=True)
     def recv(self, frame):
         img = frame.to_ndarray(format='bgr24')
         config_file = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
@@ -40,8 +41,6 @@ class VideoTransformer(VideoTransformerBase):
             cv2.rectangle(img, boxes, (0, 255, 0), thickness=2)
             cv2.putText(img, CLASSES[ClassInd - 1], (boxes[0] + 10, boxes[1]), font, fontScale=font_scale,
                         color=(0, 0, 255), thickness=1)
-            # df = (pd.DataFrame(data=[[CLASSES[ClassInd - 1], conf]], columns=['Class', 'confidence']))
-            # st.dataframe(df)
 
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         return av.video.VideoFrame.from_ndarray(img, format='rgb24')
@@ -63,7 +62,6 @@ def image_ob():
         font = cv2.FONT_HERSHEY_COMPLEX
         class_index, confidence, bbox = net.detect(img, confThreshold=0.5)
 
-        #
         for ClassInd, conf, boxes in zip(class_index.flatten(), confidence.flatten(), bbox):
             cv2.rectangle(img, boxes, (0, 255, 0), thickness=3)
             cv2.putText(img, CLASSES[ClassInd - 1], (boxes[0] + 10, boxes[1]), font, fontScale=font_scale,
@@ -142,16 +140,38 @@ def main():
         second_predictor(tab2_image)
 
 
-st.sidebar.title("Prefer your choice")
-app_mode = st.sidebar.selectbox("Choose the app mode",
-                                ["Home", "Real time Object Detection", "Object Detection", "Waste Classification", "Notify Concerned Authority"])
+with st.sidebar:
+    st.header("About")
+    st.markdown('An AI system integrated with object detection, Image classification and waste management')
+    st.sidebar.title("Prefer your choice")
+    app_mode = st.sidebar.selectbox("Choose the app mode",
+                                    ["Home", "Real time Object Detection", "Object Detection", "Waste Classification",
+                                     "Notify Concerned Authority"])
+    st.sidebar.caption("")
+    st.markdown("Made by [Sandeep Kashyap](https://www.linkedin.com/in/sandeep-kashyap-aa1545170/)")
+    st.header("Resources")
+    st.markdown('''
+            - [Github](nothing in here)
+            - [Streamlit](https://github.com/sandy252)
+            ''')
+
+    st.sidebar.header('Deploy')
+    st.sidebar.markdown(
+        '[Streamlit Community Cloud](https://streamlit.io/cloud)'
+        )
+
 
 if app_mode == "Real time Object Detection":
     st.header("live demo")
-    webrtc_streamer(key='example', video_processor_factory=VideoTransformer)
+    webrtc_streamer(key='example',
+                    video_processor_factory=VideoTransformer,
+                    rtc_configuration={  # Add this line
+                        "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
+                    }
+                    )
 
 if app_mode == "Object Detection":
-    st.header("object detection for images")
+    st.header("object detection for Images")
     image_ob()
 
 if app_mode == "Waste Classification":
@@ -160,6 +180,7 @@ if app_mode == "Waste Classification":
 
 if app_mode == "Home":
     st.header("Welcome")
+    st.subheader("Use the side bar for various app modes")
     st.markdown(
         "This project demonstrates object detection using camera or phone, waste classification, waste management "
         "system into an interactive Streamlit app.\n\n "
@@ -169,7 +190,7 @@ if app_mode == "Home":
         "custom object detection\n\n "
         "The second performs waste classification with 6 classes.\n\n "
         "People can also participate in waste management by using the third app mode where one can notify concerned "
-        "authority using by sending a mail along with the image of waste and some other details like location.")
+        "authority by sending a mail along with the image of waste and some other details.")
 
     st.markdown("""If you have any suggestions, feel free to write to 
                 kashyapsandeep252@gmail.com""",
