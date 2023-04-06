@@ -21,7 +21,7 @@ for item in category_index:
 
 
 class VideoTransformer(VideoTransformerBase, ABC):
-    @st.cache(allow_output_mutation=True)
+    # @st.cache(allow_output_mutation=True)
     def recv(self, frame):
         img = frame.to_ndarray(format='bgr24')
         config_file = 'ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt'
