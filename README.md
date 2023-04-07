@@ -65,7 +65,7 @@ Start the server
 ```bash
   streamlit run combined.py
 ```
-Test the system: To test your waste management system, you can upload an image of waste material using the web interface. The system should classify the material using a CNN algorithm and display information on appropriate recycling methods.
+Test the system: To test the waste management system, you can upload an image of waste material using the web interface. The system should classify the material using a CNN algorithm and display information on appropriate recycling methods.
 
 
 
