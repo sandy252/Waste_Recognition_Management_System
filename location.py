@@ -1,18 +1,16 @@
+
 import streamlit as st
+from util import info
 
-st.header("Welcome")
-
-st.markdown("This project demonstrates object detection using camera or phone, waste classification, waste management "
-            "system into an interactive Streamlit app.\n\n "
-            "Basically there are three app modes available with different feature.\n\n The first app gives a live "
-            "demonstration of real time object detection. For now "
-            "the model is a pretrained model from tensorflow model zoo but later I will be creating my own model for "
-            "custom object deteciton\n\n "
-            "The second performs waste classification with 6 classes. "
-            "People can also participate in waste management by using the third app mode where one can notify "
-            "concerned authority using by sending a mail along with the image of waste and some other details like "
-            "location.")
-
-st.markdown("""If you have any suggestions, feel free to write to  <span>style='color:red'>kashyapsandeep252@gmail.com</span>
-               """,
-            unsafe_allow_html=True)
+# formatted_paragraph = """
+#     - first point: nd disposal methods has led to the accumulation of waste in landfills and oceans, " \
+#                        causing pollution and resource depletion. To tackle these issues, we propose a waste " \
+#                        "management system that leverages AI-based waste classification and detection algorithms to " \
+#                        "optimize waste sorting and recycling, as well as provides users with recycling methods and " \
+#                        "educational resources. Our system aims to reduce waste generation, minimize contamination, " \
+#                      "and promote a circular economy that maximizes the value of waste materials.
+#     - second point: a quick brown fox jumps over the lazy dog
+#     - third point: what do you mean
+# """
+# st.markdown(formatted_paragraph, unsafe_allow_html=True)
+info("cardboard")

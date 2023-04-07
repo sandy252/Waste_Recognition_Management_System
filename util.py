@@ -39,90 +39,112 @@ def info(prediction):
     for pred in data.keys():
         if pred == prediction:
             info = data[pred]
-            st.header(pred + ' recycling techniques')
+            st.header(pred + ' waste recycling techniques')
             st.markdown(str(info))
 
 
 data = {
     "cardboard":
-        "Battery recycling is a recycling activity that aims to reduce the number of batteries being disposed as "
-        "municipal solid waste. Batteries contain a number of heavy metals and toxic chemicals and disposing of them "
-        "by the same process as regular household waste has raised concerns over soil contamination and water "
-        "pollution.<br><br> Most types of batteries can be recycled. However, some batteries are recycled more "
-        "readily than others, such as lead–acid automotive batteries (nearly 90% are recycled) and button cells ("
-        "because of the value and toxicity of their chemicals). Rechargeable nickel–cadmium (Ni-Cd), nickel metal "
-        "hydride (Ni-MH), lithium-ion (Li-ion) and nickel–zinc (Ni-Zn), can also be recycled. There is currently no "
-        "cost-neutral recycling option available for disposable alkaline batteries, though consumer disposal "
-        "guidelines vary by region.",
+        """
+            Cardboard recycling is the process of reusing cardboard waste by transforming it into new products. Cardboard is a type of paper-based material that is commonly used for packaging and shipping goods. Recycling cardboard helps to reduce the amount of waste that ends up in landfills and conserves natural resources by reducing the need for new cardboard production.
+            Here are some methods of cardboard recycling:
+
+            - Pulping: Pulping is the process of breaking down cardboard into its constituent fibers using water and chemicals. The resulting pulp can then be used to make new paper-based products, such as cardboard boxes, paper bags, and other packaging materials.
+
+            - Shredding: Shredding involves shredding cardboard into small pieces, which can then be used as a packaging material or as a feedstock for other materials.
+
+            - Compacting: Compacting involves compressing cardboard waste into bales or blocks, which can then be transported to recycling facilities for processing.
+
+            - Reuse: Cardboard can also be reused for its original purpose, such as for packaging and shipping goods. Used cardboard boxes can be flattened and stored for future use.
+        """,
 
     "glass":
-        "Textile recycling is the process of recovering fiber, yarn or fabric and reprocessing the textile "
-        "material into useful products. Textile waste products are gathered from different sources and are then "
-        "sorted and processed depending on their condition, composition, and resale value. The end result of this "
-        "processing can vary, from the production of energy and chemicals to new articles of clothing.<br><br>Due "
-        "to a recent trend of over consumption and waste generation in global fashion culture, textile recycling "
-        "has become a key focus of worldwide sustainability efforts. Globalization has led to a \"fast fashion\" "
-        "trend where clothes are considered by many consumers to be disposable due to their increasingly lower "
-        "prices. The development of recycled technology has allowed the textile industry to produce vast amounts "
-        "of products that deplete natural resources.",
+        """
+            Glass waste recycling is the process of transforming glass waste into new products, reducing the need for 
+            virgin raw materials, and reducing the amount of waste sent to landfills. Here are some of the various 
+            methods of glass waste recycling: 
+
+            - Glass bottle and jar recycling: The most common method of glass waste recycling is to collect and recycle glass bottles and jars. The glass is crushed and melted down to make new bottles and jars. 
+            
+            - Glass cullet recycling: Cullet is broken or crushed glass that can be used as a raw material in glass manufacturing. Glass cullet can be recycled repeatedly without losing quality, and it reduces the amount of virgin raw materials required for glass production. 
+            
+            - Glass fiber recycling: Glass fibers are commonly used in insulation and other building materials. Waste glass fibers can be recycled by melting them down and using them as raw material for new glass fiber products. 
+            
+            - Aggregate for construction: Crushed glass can be used as an aggregate in construction materials such as concrete and asphalt. This helps to reduce the demand for virgin materials and can improve the sustainability of construction projects. 
+            
+            - Glass art and crafts: Some glass waste can be repurposed for art and craft projects. This includes using broken glass to create mosaics or sculptures, or melting down colored glass to create new decorative pieces. 
+            
+            - Glass sand: Glass waste can be crushed into a fine sand-like material that can be used as a substitute for traditional sand in various applications such as landscaping, sports fields, and construction. 
+        """,
 
     "metal":
-        "Electronic waste or e-waste describes discarded electrical or electronic devices. Used electronics which "
-        "are destined for refurbishment, reuse, resale, salvage recycling through material recovery, or disposal "
-        "are also considered e-waste. Informal processing of e-waste in developing countries can lead to adverse "
-        "human health effects and environmental pollution.<br><br>Electronic scrap components, such as CPUs, "
-        "contain potentially harmful materials such as lead, cadmium, beryllium, or brominated flame retardants. "
-        "Recycling and disposal of e-waste may involve significant risk to health of workers and their "
-        "communities.<br><br>E-waste or electronic waste is created when an electronic product is discarded after "
-        "the end of its useful life. The rapid expansion of technology and the consumption driven society results "
-        "in the creation of a very large amount of e-waste in every minute.",
+        """
+            Metal recycling is the process of reusing metals to create new metal products. Here are some of the methods used for metal recycling:
+
+            - Collection and sorting: The first step in metal recycling is to collect and sort the metal. This involves separating the metal by type, such as steel, aluminum, or copper.
+
+            - Processing: The sorted metal is then processed to remove any contaminants, such as plastic or rubber. This may involve shredding or crushing the metal into smaller pieces.
+
+            - Melting: The processed metal is then melted down in a furnace. The temperature required to melt the metal will depend on the type of metal being recycled.
+
+            - Purification: Once the metal is melted, it may need to be purified to remove any impurities. This involves adding chemicals to the metal to separate any non-metallic elements.
+
+            - Solidifying: Once the metal is purified, it is solidified into the desired shape. This may involve casting the metal into molds or rolling it into sheets.
+
+            - Fabrication: The final step in metal recycling is to use the newly created metal products to create new metal products. This may involve cutting, welding, or otherwise shaping the metal into the desired form.
+        """,
 
     "paper":
-        "Glass recycling is the processing of waste glass into usable products. Glass that is crushed and ready "
-        "to be remelted is called cullet. There are two types of cullet: internal and external. Internal cullet "
-        "is composed of defective products detected and rejected by a quality control process during the "
-        "industrial process of glass manufacturing, transition phases of product changes (such as thickness and "
-        "colour changes) and production offcuts. External cullet is waste glass that has been collected or "
-        "reprocessed with the purpose of recycling. External cullet (which can be pre- or post-consumer) is "
-        "classified as waste. The word \"cullet\", when used in the context of end-of-waste, will always refer to "
-        "external cullet.<br><br>To be recycled, glass waste needs to be purified and cleaned of contamination. "
-        "Then, depending on the end use and local processing capabilities, it might also have to be separated "
-        "into different colors. Many recyclers collect different colors of glass separately since glass retains "
-        "its color after recycling.",
+        """
+           Paper recycling is the process of reusing old paper to create new paper products. Here are some of the methods used for paper recycling:
+
+            - Collection and sorting: The first step in paper recycling is to collect and sort the paper. This involves separating the paper by type, such as cardboard, newspaper, or office paper.
+
+            - Pulping: The sorted paper is then mixed with water and chemicals to create a slurry. This slurry is called pulp, and it is the basis for creating new paper products.
+
+            - Screening and cleaning: The pulp is screened to remove any remaining contaminants, such as staples or paper clips. It is also cleaned to remove any ink or other substances.
+
+            - De-inking: If the recycled paper is going to be used to create new white paper products, it must be de-inked. This involves using chemicals and mechanical processes to remove the ink and other substances from the pulp.
+
+            - Bleaching: If the recycled paper is going to be used to create new white paper products, it may also need to be bleached. This involves using chemicals to remove any remaining color from the pulp.
+
+            - Repulping and refining: The cleaned and de-inked pulp is then repulped and refined to create new paper products. This involves adding water and other additives to the pulp to create the desired texture and quality.
+
+            - Papermaking: The final step in paper recycling is to use the refined pulp to create new paper products. The pulp is spread out onto a screen and pressed to remove any remaining water. It is then dried and rolled into large rolls of paper, which can be used to create a variety of paper products. 
+        """,
 
     "plastic":
-        "Recycling prevents the release of hazardous materials into the environment. Mercury, an extremely toxic "
-        "heavy metal, is used in fluorescent light bulbs to increase energy efficiency. In addition to mercury, "
-        "some HID bulbs contain radioactive substances like Krypton-85 and thorium used for quick and easy light "
-        "ignition. LEDs on the other hand do not contain mercury; but, they do contain nickel, lead, "
-        "and trace amounts of arsenic. Light bulbs often break when thrown into a dumpster, trash can or "
-        "compactor, or when they end up in a landfill or incinerator. This causes the release of hazardous "
-        "materials into the environment and can create serious public and environmental health "
-        "concerns. It’s also important to remember that recycling allows the reuse of the glass, "
-        "metals and other materials that make up light bulbs. Virtually all components of light bulbs can be "
-        "recycled.",
-    "trash":
-        "Several kinds and also large amounts of metals are used in industrial processes every day. Since the "
-        "industrial revolution period has taken place, our consumption levels skyrocketed due to the mass "
-        "production of goods and the resulting low unit price.<br><br>The most consumed metal worldwide is "
-        "aluminum, followed by copper, zinc, lead and nickel. Moreover, some precious materials like gold are "
-        "used for our computers and other electronic devices.<br><br>Metal is therefore crucial to sustaining our "
-        "living standard. However, metals are resources that are limited. The depletion of metals can be a big "
-        "issue in the future since the world population grows rapidly and thus also the demand for goods made out "
-        "of metal will increase.<br><br>To mitigate the problem of metal depletion, we have to look out for "
-        "effective measures. One of those measures could be metal recycling.",
+        """
+            Plastic recycling is the process of reusing plastic waste by transforming it into new products. It involves the collection, sorting, cleaning, and processing of plastic waste to create new materials that can be used in the production of a wide range of products, including plastic bottles, containers, bags, and other items.
+            Here are some methods of plastic recycling:
 
+            - Mechanical recycling: This is the most common method of plastic recycling, which involves sorting, cleaning, and shredding the plastic waste into small pieces. These pieces are then melted and reformed into new plastic products.
+
+            - Chemical recycling: Chemical recycling involves breaking down plastic waste into its constituent molecules using various chemical processes. These molecules can then be used to create new plastic products or other chemicals.
+
+            - Feedstock recycling: Feedstock recycling is a process of converting plastic waste into feedstock or raw materials, which can be used to create new plastic products or other chemicals.
+
+            - Energy recovery: In this method, plastic waste is burned to generate energy. This process is known as waste-to-energy or incineration.
+
+            - Biodegradable plastics: Biodegradable plastics are designed to decompose naturally when exposed to the environment, such as through composting or biodegradation in landfills.
+
+            - Upcycling: Upcycling is the process of transforming plastic waste into new, higher-value products. This involves converting plastic waste into other materials, such as fabrics or building materials, instead of simply recycling it into new plastic products.
+        """,
+ 
     "Organic":
-        "Organic wastes contain materials which originated from living organisms. There are many types of organic "
-        "wastes and they can be found in municipal solid waste , industrial solid waste , agricultural waste, "
-        "and wastewaters. Organic wastes are often disposed of with other wastes in landfills or incinerators, "
-        "but since they are biodegradable , some organic wastes are suitable for composting and land "
-        "application.<br><br>Organic materials found in municipal solid waste include food, paper, wood, "
-        "sewage sludge , and yard waste. Because of recent shortages in landfill capacity, the number of "
-        "municipal composting sites for yard wastes is increasing across the country, as is the number of "
-        "citizens who compost yard wastes in their backyards. On a more limited basis, some mixed municipal waste "
-        "composting is also taking place. In these systems, attempts to remove inorganic materials are made prior "
-        "to composting.<br><br>Food waste from restaurants and grocery stores is typically disposed of through "
-        "garbage disposals, therefore, it becomes a component of wastewater and sewage sludge.",
+        """
+            Organic waste recycling is the process of converting organic waste, such as food scraps, yard waste, and agricultural waste, into a useful product. Organic waste contains carbon-based materials, which can be decomposed naturally by microorganisms and turned into compost, biogas, or other valuable products.
+            Here are some methods of recycling organic waste:
+
+            - Composting: Composting is a natural process of decomposing organic waste, such as food scraps, yard waste, and leaves, into a nutrient-rich soil amendment. It involves combining the organic waste with soil and other organic materials in a compost bin or pile and allowing it to decompose over time.
+
+            - Vermicomposting: Vermicomposting is a type of composting that uses worms to break down organic waste. It involves placing the organic waste in a container with worms, such as red wigglers, and allowing the worms to digest the waste and produce nutrient-rich worm castings.
+
+            - Anaerobic digestion: Anaerobic digestion is a process of breaking down organic waste in the absence of oxygen to produce biogas, which can be used as a source of renewable energy. It involves placing the organic waste in a sealed container, such as a digester, and allowing bacteria to break down the waste and produce methane gas.
+
+            - Incineration: Incineration is a process of burning organic waste at high temperatures to reduce its volume and generate energy. This process is typically used for large-scale waste management and is not considered a sustainable method of organic waste recycling.
+
+            - Land application: Land application involves spreading organic waste on farmland as a fertilizer. This method can help to improve soil health and fertility, but it must be done carefully to prevent contamination and nutrient runoff.
+        """,
 
 }
