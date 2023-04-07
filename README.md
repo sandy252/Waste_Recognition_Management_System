@@ -35,9 +35,13 @@ If you haven't already, you'll need to install Python on your local machine. You
 - Waste Reporting: Our waste management system includes a notification system that allows users to report the presence of waste material to the relevant authorities. With just a few clicks, users can send an email to the authorities with an attached image of the waste material and location details. This feature helps to promote community involvement in waste management and encourages individuals to take responsibility for keeping their surroundings clean and hygienic. We believe that this feature can make a real difference in the fight against waste pollution and contribute towards building a more sustainable future.
 
 ## Screenshots and implementation
+### First page
 ![Screenshot (69)](https://user-images.githubusercontent.com/66490787/230352785-1d7170bc-82bf-4417-9c8d-704ce90f711b.png)
+### Second page
 ![Screenshot (70)](https://user-images.githubusercontent.com/66490787/230352803-db696d0f-fd9a-4dde-ad34-77980ef1ab5c.png)
+### Third page
 ![Screenshot (71)](https://user-images.githubusercontent.com/66490787/230352815-c10f533a-a159-4333-b7ba-e2fad0d4a634.png)
+### Fourth page
 ![Screenshot (73)](https://user-images.githubusercontent.com/66490787/230352831-200d8fb1-7e64-491b-8275-3919871cdf86.png)
 
 ## Run Locally
