@@ -3,7 +3,7 @@
 
 Welcome to our waste management system, a project aimed at promoting sustainable waste management practices using advanced AI and machine learning techniques. Our system is designed to help individuals and communities manage their waste in a more effective and efficient way, reducing environmental impact and promoting a healthier, more sustainable future.
 
-Our waste management system uses Convolutional Neural Networks (CNN) to classify different types of waste materials, allowing users to easily identify and sort their waste into the appropriate categories for recycling and disposal. We have also integrated waste detection functionality, which can detect potential waste management issues or hazards, such as overflowing bins, litter, or illegal dumping.
+Our waste management system uses Convolutional Neural Networks (CNN) to classify different types of waste materials, allowing users to easily identify and sort their waste into the appropriate categories for recycling and disposal. We have also integrated waste detection functionality, which can detect different wastes.
 
 In addition to waste classification and detection, our system also provides information on recycling methods for each type of waste, promoting environmentally responsible waste management practices. We have also included a notification system, which allows users to report waste issues to the appropriate authorities with just a few clicks.
 
@@ -79,3 +79,5 @@ Test the system: To test the waste management system, you can upload an image of
 - Waste Recycling: A third area for future development could be to provide more detailed information and guidance on recycling different types of waste material. This could include developing a database of recycling centers and facilities, providing tips on how to recycle different materials, and integrating a reward system to incentivize users to recycle more.
 - Data Analytics: Finally, another area for future development could be to develop a more advanced data analytics platform that can provide insights into waste generation, disposal, and recycling patterns at the local, regional, and national levels. This could involve using big data analytics, machine learning, and data visualization techniques to identify trends and patterns, and inform waste management policies and strategies.
 
+## Deployment
+[App Link](https://sandy252-waste-recognition-management-system-app-sgtepq.streamlit.app/)
