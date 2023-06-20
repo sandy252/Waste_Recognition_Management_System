@@ -22,10 +22,6 @@ Improper waste management not only poses a risk to human health and the environm
 - Google collaboratory(model training)
 
 
-## Installation
-
-### Install Python:
-If you haven't already, you'll need to install Python on your local machine. You can download the latest version of Python from the official website: https://www.python.org/downloads/ and then follow the steps below
 
 ## Usage and features
 
@@ -40,6 +36,10 @@ If you haven't already, you'll need to install Python on your local machine. You
 https://github.com/sandy252/Waste_Recognition_Management_System/assets/66490787/90e0d6b3-5252-4845-8ec3-0606145e1b44
 
 
+## Installation
+
+### Install Python:
+If you haven't already, you'll need to install Python on your local machine. You can download the latest version of Python from the official website: https://www.python.org/downloads/ and then follow the steps below
 
 
 ## Run Locally
